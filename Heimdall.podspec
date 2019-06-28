@@ -25,6 +25,7 @@ Pod::Spec.new do |s|
   s.swift_version   = "4.2"
   s.source_files    = "Heimdall/*.{swift,h}"
   s.requires_arc    = true
+  s.preserve_paths = 'CommonCrypto/**/*'
   s.pod_target_xcconfig = {
     'SWIFT_INCLUDE_PATHS[sdk=macosx*]'           => '$(PODS_ROOT)/Heimdall/CommonCrypto/macosx',
     'SWIFT_INCLUDE_PATHS[sdk=iphoneos*]'         => '$(PODS_ROOT)/Heimdall/CommonCrypto/iphoneos',
