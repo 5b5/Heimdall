@@ -25,5 +25,14 @@ Pod::Spec.new do |s|
   s.swift_version   = "4.2"
   s.source_files    = "Heimdall/*.{swift,h}"
   s.requires_arc    = true
+  s.pod_target_xcconfig = {
+    'SWIFT_INCLUDE_PATHS[sdk=macosx*]'           => '$(PODS_ROOT)/Heimdall/CommonCrypto/macosx',
+    'SWIFT_INCLUDE_PATHS[sdk=iphoneos*]'         => '$(PODS_ROOT)/Heimdall/CommonCrypto/iphoneos',
+    'SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]'  => '$(PODS_ROOT)/Heimdall/CommonCrypto/iphonesimulator',
+    'SWIFT_INCLUDE_PATHS[sdk=appletvos*]'        => '$(PODS_ROOT)/Heimdall/CommonCrypto/appletvos',
+    'SWIFT_INCLUDE_PATHS[sdk=appletvsimulator*]' => '$(PODS_ROOT)/Heimdall/CommonCrypto/appletvsimulator',
+    'SWIFT_INCLUDE_PATHS[sdk=watchos*]'          => '$(PODS_ROOT)/Heimdall/CommonCrypto/watchos',
+    'SWIFT_INCLUDE_PATHS[sdk=watchsimulator*]'   => '$(PODS_ROOT)/Heimdall/CommonCrypto/watchsimulator'
+  }
 
 end

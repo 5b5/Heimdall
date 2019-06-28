@@ -35,7 +35,7 @@
 
 import Foundation
 import Security
-import CommonCrypto
+import HeimdallCommonCrypto
 
 open class Heimdall {
     fileprivate let publicTag: String
